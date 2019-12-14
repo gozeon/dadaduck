@@ -14,8 +14,13 @@
 	<div class="navbar-fixed">
 		<nav class="nav-extended">
 			<div class="nav-wrapper">
-				<a href="#" class="brand-logo">Dada Duck</a>
+				<a href="index.html" class="brand-logo">Dada Duck</a>
 				<a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+					<li><a href="sass">Sass</a></li>
+					<li><a href="badges">Components</a></li>
+					<li><a href="collapsible">JavaScript</a></li>
+				</ul>
 			</div>
 		</nav>
 	</div>
@@ -40,22 +45,19 @@
 		<li><a class="waves-effect" href="#!">Third Link With Waves</a></li>
 	</ul>
 
-	<div class="row">
-		<div class="carousel carousel-slider">
-			<a class="carousel-item" href="#one!"><img src="../static/images/a.jpg"></a>
-			<a class="carousel-item" href="#one!"><img src="../static/images/b.jpg"></a>
-			<a class="carousel-item" href="#one!"><img src="../static/images/c.jpg"></a>
-		</div>
+	<div class="carousel carousel-slider">
+		<a class="carousel-item" href="#one!"><img src="../static/images/a.jpg"></a>
+		<a class="carousel-item" href="#one!"><img src="../static/images/b.jpg"></a>
+		<a class="carousel-item" href="#one!"><img src="../static/images/c.jpg"></a>
 	</div>
-
 
 	<div class="row">
 		<div class="col s12">
 			<ul class="collection">
-				<li class="collection-item"><span class="badge">29</span>电影</li>
-				<li class="collection-item"><span class="new badge blue">4</span>小说</li>
-				<li class="collection-item"><span class="new badge red" data-badge-caption="ss">10</span>历史</li>
-				<li class="collection-item"><span class="badge">14</span>军事</li>
+				<a href="kind.html" class="collection-item"><span class="badge">29</span>电影</a>
+				<a href="kind.html" class="collection-item"><span class="new badge blue">4</span>小说</a>
+				<a href="kind.html" class="collection-item"><span class="new badge red" data-badge-caption="ss">10</span>历史</a>
+				<a href="kind.html" class="collection-item"><span class="badge">14</span>军事</a>
 			</ul>
 		</div>
 	</div>
@@ -92,17 +94,18 @@
 	<script>
 
 		document.addEventListener('DOMContentLoaded', function () {
-			M.AutoInit();
 			var carouselInstance = M.Carousel.init(document.querySelector('.carousel'), {
 				fullWidth: true,
 				pressed: true,
-				indicators: true
+				indicators: true,
 			});
 
 			// autopalyer
-			// setInterval(function () {
-			// 	carouselInstance.next()
-			// }, 3800)
+			setInterval(function () {
+				carouselInstance.next()
+			}, 3800)
+
+			M.AutoInit();
 
 		});
 	</script>
